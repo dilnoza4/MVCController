@@ -12,7 +12,6 @@ public class StringController {
     public StringController(StringService stringService) {
         this.stringService = stringService;
     }
-
     @GetMapping("/reverse")
     public ResponseEntity<String> reverse(@RequestParam String input) {
         return ResponseEntity.ok(stringService.reverse(input));
